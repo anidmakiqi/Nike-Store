@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+         Nike - Just Do It
+    </title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+       .carousel-item img {
+            width: 100%;
+            height: 550px;
+        
+        }
+        .picture-col{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-text{
+          animation-name:slideInFromRight;
+          animation-duration: 1.5s;
+        }
+        .about-pic{
+          animation-name: slideInFromLeft; 
+          animation-duration: 1.5s;
+        }
+
+        @keyframes slideInFromLeft{
+            from{
+              opacity:0.2;
+              transform: translateX(-80px);
+            }
+            to{
+              opacity: 1;
+              transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromRight{
+            from{
+              opacity:0.2;
+              transform: translateX(80px);
+            }
+            to{
+              opacity: 1;
+              transform: translateX(0);
+            }
+        }
+       
+    </style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container-fluid">
+          <img src="logo.png" class="navbar-brand" style="width: 80px; object-fit: cover;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+             
+                <a class="nav-link d-flex align-items-center" aria-current="page" href="Home.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                  </svg>
+                  Home</a>
+              </li>
+
+              
+              <li class="collapse navbar-collapse nav-item" id="navbarNavDarkDropdown">
+                
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                      </svg>
+                      Shop Now
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="MenSection.html">Men</a></li>
+                      <li><a class="dropdown-item" href="WomenSection.html">Women</a></li>
+                      <li><a class="dropdown-item" href="HatsSection.html">Acessories(Hats)</a></li>
+                    </ul>
+                  </li>
+              
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="Cart.html" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                  </svg>
+                Cart(<b class="cart-items text-primary"></b>) </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="Contact.html">Contact</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+
+      <section class="my-5">
+        <div class="container-fluid">
+            <div class="container p-5">
+              <div class="row d-flex align-items-center opening-row">
+
+              <div class="col picture-col d-none d-md-block about-pic">
+                    <img src="https://th.bing.com/th/id/R.d7e3eef274b9bceed20687d3023e77de?rik=PeUZdU%2bh5NFaog&riu=http%3a%2f%2fstatic1.squarespace.com%2fstatic%2f53ed1999e4b0f5d3db2825af%2f53ed1acce4b0c6f4cd3e20aa%2f594e8ccb1b631bec82291184%2f1534718131207%2fhow%2bto%2bmaster%2bexternal%2bcommunication%2bas%2ba%2bsmall%2bbusiness.jpg%3fformat%3d1500w&ehk=zazQALQtna7mhiVc3f56I%2fqkOZxC17k3UGGM6HdzIuw%3d&risl=&pid=ImgRaw&r=0" alt="" class="shadow rounded"  style="object-fit: cover; width: 100%; " >
+              </div>
+
+
+                <div class="col-md text-start about-text">
+                    <div class="display-6 text-primary m-2">
+                        Contacts
+                    </div>
+                    <div class="lead m-2 text-secondary">
+                        You can contact us directly from this page, ask us about things you need to know or if you looking to have a longer conversation we can provide you with some phone numbers of people you can contact. 
+                    </div>
+                    
+                </div>
+              
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="my-5">
+          <div class="container-fluid">
+            <div class="container p-5">
+                <div class="row">
+                    <div class="col-md text-center">
+                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+</svg>
+                        </div>
+
+                        <div class="h3">Contact us on email</div>
+                        <div class="lead">Email 1: nike.shop@gmail.com</div>
+                        <div class="lead">Email 2: nikeshop@gmail.com</div>
+                       
+
+                    </div>
+
+                    <div class="col-md text-center">
+                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+</svg>
+                        </div>
+
+                        <div class="h3">Contact us on Phone</div>
+                        <div class="lead">Phone 1: +38344648539</div>
+                        <div class="lead">Phone 2: +38345648437</div>
+                        <div class="lead">Phone 3: +38348487531</div>
+                       
+
+                    </div>
+
+                    <div class="col-md text-center">
+                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg>
+                        </div>
+
+                        <div class="h3">Social Medias</div>
+                        <div class="lead">Instagram: nikeshop_</div>
+                        <div class="lead">Facebook : nikeshop_</div>
+                        <div class="lead">Twitter  : nikeshop_</div>
+                        <div class="lead">Youtube  : nikeshop_</div>
+                       
+
+                    </div>
+
+                </div>
+            </div>
+          </div>    
+      </section>
+
+
+      <section class="my-5">
+        <div class="container-fluid">
+            <div class="container p-5">
+
+            <div class="display-6 text-primary my-5">Send Us a Message</div>
+            <form class="row g-3" method="get">
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="validationDefault01" name="full_name" required>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault02" class="form-label" >Phone</label>
+    <input type="text" class="form-control" id="validationDefault02" name="phone" required>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefaultUsername" class="form-label">Gmail</label>
+    <div class="input-group">
+      <span class="input-group-text" id="inputGroupPrepend2">@</span>
+      <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" name="gmail" required>
+    </div>
+  </div>
+
+  <div class="col-12">
+  <div class="form-floating">
+  <input class="form-control" type="text" id="floatingTextarea2"  id="validationDefault03" name="message" required style="height: 100px">
+  <label for="floatingTextarea2">Message</label>
+</div>
+  </div>
+  <div class="col-12 text-center">
+    <button class="btn btn-primary btn-lg" type="submit" name="submit">Send</button>
+  </div>
+</form>
+
+            </div>
+        </div>
+      </section>
+   
+
+      <div class="container-fluid bg-dark text-light mt-5">
+      
+        <div class="row p-5 d-flex align-items-center main">
+        <div class="col-md m-3 text-center">
+        <img src="SocialMediaLogos/ig.jpg" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+        <p> Follow us on instagram</p>
+        </div>
+        <div class="col-md m-3 text-center">
+        <img src="SocialMediaLogos/yt.png" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+        <p> Subscribe on Youtube</p>
+        </div>
+        <div class="col-md m-3 text-center">
+        <img src="SocialMediaLogos/twitter.jpg" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+         <p>Follow us on Twitter</p>
+        </div>
+        <div class="col-md m-3 text-center">
+          <img src="SocialMediaLogos/fb.png" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+           <p>Follow us on Facebook</p>
+          </div>
+        </div>
+
+    </div>
+
+    <script src="scripts/AboutUs.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>       
+</body>
+</html>

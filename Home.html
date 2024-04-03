@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Just Do It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    .main{
+        align-items: center;
+        justify-content: center;
+    }
+    .message{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+    }
+    .home-img{
+        animation-name: slideFromBottom;
+        animation-duration: 2s;
+    }
+    .home-text{
+        animation-name: slideFromTop;
+        animation-duration: 2s;
+    }
+    .social{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sections-div{
+      background-color:rgb(0, 140, 255);
+      border-radius: 10px;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+
+    }
+    .sections-div:hover{
+      background-color:rgb(125, 194, 251);
+      color: rgb(255, 255, 255);
+    }
+    .anchors{
+      text-decoration: none;
+      color: inherit;
+    }
+    .anchors:active{
+      text-decoration: none;
+      color: inherit;
+    }
+   
+
+    @keyframes slideFromBottom{
+        from{
+             transform: translateY(100px);
+             opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideFromTop{
+        from{
+             transform: translateY(-100px);
+             opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container-fluid">
+          <img src="logo.png" class="navbar-brand" style="width: 80px; object-fit: cover;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+             
+                <a class="nav-link text-primary d-flex align-items-center" aria-current="page" href="Home.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                  </svg>
+                  Home</a>
+              </li>
+
+              
+              <li class="collapse navbar-collapse nav-item" id="navbarNavDarkDropdown">
+               
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                      </svg>
+                      Shop Now
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="MenSection.html">Men</a></li>
+                      <li><a class="dropdown-item" href="WomenSection.html">Women</a></li>
+                      <li><a class="dropdown-item" href="HatsSection.html">Acessories(Hats)</a></li>
+                    </ul>
+                  </li>
+                
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="Cart.html" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                  </svg>
+                Cart(<b class="cart-items text-primary"></b>) </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+              </li>
+
+             
+
+              
+              <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <section class="container mt-5" id="homeSection">
+      <div class="offcanvas offcanvas-start" id="shop">
+        <div class="offcanvas-header">
+          <p class="offcanvas-title text-primary display-6">Sections</p>
+          <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+      
+       
+
+        <div class="offcanvas-body">
+          <a href="MenSection.html" class="anchors">
+          <div class="lead sections-div p-3 m-2"><b > Men</b> - Clothing Section</div>
+          </a>
+        <a href="WomenSection.html" class="anchors">
+          <div class="lead sections-div p-3 m-2"><b> Women</b> - Clothing Section</div>
+        </a>
+        <a href="HatsSection.html" class="anchors">
+          <div class="lead sections-div p-3 m-2"><b >Hats</b> - Acessories Section</div>
+        </a>
+        <a href="Cart.html" class="anchors">
+          <div class="lead sections-div p-3 m-2">View Your Cart</div>
+        </a>
+        </div>
+      </div>
+      
+        <div class="container p-5 row d-flex main">
+       <div class="col text-center home-text">
+        <p class="display-5 text-primary mb-0">
+        Nike - Just Do It
+        </p>
+        <p class="display-6 text-secondary mt-0">
+        Nike Shop
+          </p>
+        <p class="lead text-secondary m-0">Newest Nike Shop</p>
+        <p class="text-secondary lead mt-0 mb-3"> With Newest Nike Products</p>
+        <a class="lead btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#shop">Shop Now</a>
+       </div>
+       <div class="col text-center d-none d-md-block home-img"> 
+       <img src="https://i.pinimg.com/originals/c5/40/73/c5407317ae1bca630f310237314d23c3.png" alt="" class="shadow rounded" style="width: 80%; object-fit: cover;">
+      </div>
+        </div>
+    
+    </section>
+
+    <section class="container m-auto text-center mt-5" id="locationSection">
+        <div class="container p-5 row d-flex main">
+            <div class="col-md-7">
+               <img src="HomePageImages/Home2.jpg" class="rounded shadow" style="width: 100%; object-fit: cover;">
+             </div>
+               <div class="col-md-5 text-center p-5">
+                <p class="display-6 text-primary">
+                    Visit Us
+                </p>
+                <p class="lead">
+                  Shop to us live and get a discount
+                </p>
+
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#location">
+                    View Location
+                </button>
+            </div>
+                <div class="modal fade" id="location" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-primary" id="staticBackdropLabel">Location</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <img src="HomePageImages/location.png" alt="" style="width: 100%; object-fit: cover;" class="p-1">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+        </div>
+    </section>
+
+
+    <section class="container mt-5" id="subscribeSection">
+      
+        <div class="container p-5 row d-flex main">
+       <div class="col text-center">
+        <p class="display-6 text-primary">
+        Shop as a Subscriber
+        </p>
+        <p class="lead text-secondary m-2">Subscribe for 10% off</p>
+        <div class="subscribe-div">
+        <button class="lead btn btn-outline-primary subscribe">Subscribe</button>
+       
+        </div>
+       </div>
+       <div class="col text-center d-none d-md-block"> 
+        <img src="https://cdn.shopify.com/s/files/1/0104/1203/2085/files/Frame_12.png?v=1686319265" class="rounded shadow" style="width: 100%; object-fit: cover;" alt="">
+       </div>
+        </div>
+    
+    </section>
+
+    <div class="container-fluid bg-dark text-light mt-5">
+      
+        <div class="row p-5 d-flex align-items-center main">
+        <div class="col-md m-3 text-center">
+        <img src="SocialMediaLogos/ig.jpg" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+        <p> Follow us on instagram</p>
+        </div>
+        <div class="col-md m-3 text-center">
+        <img src="SocialMediaLogos/yt.png" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+        <p> Subscribe on Youtube</p>
+        </div>
+        <div class="col-md m-3 text-center">
+        <img src="SocialMediaLogos/twitter.jpg" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+         <p>Follow us on Twitter</p>
+        </div>
+        <div class="col-md m-3 text-center">
+          <img src="SocialMediaLogos/fb.png" alt="" class="rounded-circle" style="width:50px; height: 50px; object-fit: cover;">
+           <p>Follow us on Facebook</p>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="scripts/Home.js" type="module"></script>
+    <script src="scripts/AboutUs.js" type="module"></script>
+</body>
+</html>

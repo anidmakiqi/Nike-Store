@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <title>
+            Nike - Just Do It
+        </title>
+        <style>
+            body{
+              overflow-x: hidden;
+            }
+            .summary-item{
+                display: flex;
+                justify-content: space-between;
+            }
+            .delete-btn{
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+            }
+            .spinner{
+              width: 100px;
+              height: 100px;
+            }
+            .card{
+              animation-duration: 1s;
+              animation-name: slideFromLeft;
+            }
+           .choose-delivery{
+            font-size: 24px;
+            font-weight: lighter;
+           }
+            .delivery-option{
+            cursor: pointer;
+            border: solid rgba(0, 0, 0, 0.114) 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            }
+            .delivery-option:hover{
+            background-color: rgb(244, 244, 244);
+            }
+
+            .ship-option{
+              border: black solid 2px;
+            }
+
+          @keyframes slideFromLeft{
+            from{
+              transform: translateX(-100px);
+              opacity: 0.5;
+            }
+            to{
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+           
+            
+
+        </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container-fluid">
+          <img src="logo.png" class="navbar-brand" style="width: 80px; object-fit: cover;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+             
+                <a class="nav-link d-flex align-items-center" aria-current="page" href="Home.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                  </svg>
+                  Home</a>
+              </li>
+
+              
+              <li class="collapse navbar-collapse nav-item" id="navbarNavDarkDropdown">
+                
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                      </svg>
+                      Shop Now
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="MenSection.html">Men</a></li>
+                      <li><a class="dropdown-item" href="WomenSection.html">Women</a></li>
+                      <li><a class="dropdown-item" href="HatsSection.html">Acessories(Hats)</a></li>
+                    </ul>
+                  </li>
+              
+              </li>
+
+              <li class="nav-itemy">
+                <a class="nav-link d-flex align-items-center  text-primary" href="Cart.html" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                  </svg>
+                Cart</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+          <div class="container display-6 mt-5 text-secondary">
+             Cart Items(<span class="cart-quantity"></span>)
+          </div>
+          <div class="text-success mb-5 container">Buy More than 100$ and get a free shiping</div>
+        
+
+          <div class="container">
+            <div class="row">
+                <div class="col my-2">
+                 <div class="row cart-row">
+                <div class="text-center">
+                
+                  <div class="spinner-border mt-5 text-primary" role="status">
+                    <span class="visually-hidden"></span>
+                  </div>
+                </div>
+                 </div>
+                </div>
+
+
+                <div class="col-md-6 summary my-3">
+                    <div class="container-fluid p-4 border rounded shadow">
+                      <div class="h3 text-center mb-5">Summary</div>
+
+                    <div class="summary-item my-2">
+                      <div class="lead">Shiping and handling:</div>
+                      <div class="lead shiping">...</div>
+                    </div>
+
+                    <div class="summary-item my-2">
+                        <div class="lead">Estimated Tax (4%):</div>
+                        <div class="lead tax">...</div>
+                    </div>
+
+                    <div class="summary-item my-2">
+                      <div class="lead">Price (without shiping & tax):</div>
+                      <div class="lead price">...</div>
+                    </div>
+
+                    <div class="summary-item my-2">
+                        <div class="lead">Subscription Discount:</div>
+                        <div class="lead discount">...</div>
+                    </div>
+
+               
+
+                    <div class="summary-item my-2">
+                      <div class="lead">Total Price(Tax & shiping & discount):</div>
+                      <div class="lead total-price">...</div>
+                    </div>
+
+
+                    <div class="text-center my-5 order-div">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#order-form">Order Items</button>
+                    </div>
+
+                    <div class="modal fade" id="order-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="container text-center lead choose-delivery">
+                              <p class="choose-delivery"> Choose Delivery Option </p> 
+                            </div>
+
+                            <div class="container"> 
+                            <div class="row mb-3">
+                              <div class="col-6 py-3 px-5 text-center delivery-option ship-option lead" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck-front" viewBox="0 0 16 16">
+                                  <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zM4 2a1 1 0 0 0-1 1v3.9c0 .625.562 1.092 1.17.994C5.075 7.747 6.792 7.5 8 7.5s2.925.247 3.83.394A1.008 1.008 0 0 0 13 6.9V3a1 1 0 0 0-1-1zm0 1h8v3.9q0 .002 0 0l-.002.004-.005.002h-.004C11.088 6.761 9.299 6.5 8 6.5s-3.088.26-3.99.406h-.003l-.005-.002L4 6.9q0 .002 0 0z"/>
+                                  <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h9A2.5 2.5 0 0 1 15 2.5v9c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.5 2.5 0 0 1-1-2zM3.5 1A1.5 1.5 0 0 0 2 2.5v9A1.5 1.5 0 0 0 3.5 13h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 12.5 1z"/>
+                                </svg> 
+                                <div>Ship</div> 
+                              </div>
+                               
+                              <div class="col-6 py-3 px-5 text-center delivery-option pickup-option lead" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                </svg>
+                                Pick
+                              </div>
+
+                             </div>
+                            </div>
+                          
+                            <form class="row g-3 needs-validation p-3 form-content" novalidate>
+                              
+                             
+                              <div class="col-6">
+                               
+                                <input type="text" class="form-control p-3" id="validationCustom01" placeholder="First Name" required>
+                            
+                              </div>
+                              <div class="col-6">
+                              
+                                <input type="text" class="form-control p-3" id="validationCustom02" placeholder="Last name"  required>
+                                
+                              </div>
+                              <div class="col-12">
+                              
+                               
+                                  <input type="text" class="form-control p-3" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Write Your Adreess Here" required>
+                                  
+                                </div>
+                              
+                            
+                              <div class="col-12">
+                                <input type="text" class="form-control p-3" id="validationCustom04" placeholder="Email"  required>
+                           
+                              </div>
+                              <div class="col-12">
+                               
+                                <input type="text" class="form-control p-3" id="validationCustom05" placeholder="Phone Number" required>
+                                
+                              </div>
+                              
+                              
+                              
+                              <!--
+                               <div class="col-12 my-4">
+                                  
+                                    <select class="form-select p-3" id="validationCustom04" required>
+                                    <option selected disabled value="">Choose a pick up Store</option>
+                                     <option>Pristina Store</option>
+                                     <option>Berlin Store</option>
+                                     <option>London Store</option>
+                                     </select>
+                                    <div class="invalid-feedback">
+                                     Please select a Store
+                                    </div>
+                               </div>
+
+                            -->
+                          
+                              <div class="col-12 text-center mt-4">
+                                <button class="btn btn-primary order-button" type="submit">Order</button>
+                              </div>
+                      
+                            </form>
+                            </div>
+
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                   
+
+                    </div>
+
+                </div>
+            </div>
+          </div>
+
+       <script>
+       
+(function () {
+  'use strict'
+
+  
+  var forms = document.querySelectorAll('.needs-validation')
+
+
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+       </script>
+
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="scripts/CartHtml.js" type="module"></script>
+        <script src="scripts/Order.js" type="module"></script>
+      </body>
+</html>
